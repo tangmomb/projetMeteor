@@ -8,6 +8,8 @@ pour mettre un tuto en ligne avec une photo :
 
 - rentrez une url d'image en ligne (google images...) et le reste dans les input correspondants.
 
-la base de donnÈe se met ‡ jour et les tutos sont visibles. 
+la base de donn√©e se met √† jour et les tutos sont visibles. 
 
-la fonction recherche n'est pas terminÈe
+la fonction recherche n'est pas termin√©e
+
+R√©alis√© avec Antoine Floris
