@@ -1,0 +1,46 @@
+<template name="contenu">
+
+    <h1>Il faut être connecté pour ajouter un tutoriel</h1>
+
+    <div id="inscription">
+        {{> loginButtons}}
+        <span class="text"><strong>{{username}}</strong></span>
+    </div>
+
+
+
+    {{#if currentUser}}
+    <div class="recherche">
+        <input autocomplete="off" type="text" placeholder="Rechercher un tuto {{search}}" class="inputsearch">
+        <button class="recherche button">rechercher</button>
+    </div>
+
+    <div id="formulaire">
+    <input type="text" id="image-tuto" placeholder="Entrez une url d'image">
+    <input type="text" id="nom-tuto" placeholder="Entrez un titre">
+    <input type="text" id="description-tuto" placeholder="Entrez une description">
+        <form action="">
+        <select  id="selector" name="selector" form="selectorlist">
+            <option value="js">JS</option>
+            <option value="php">PHP</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+        </select>
+        </form>
+    <button class="button" id="add_tuto">Proposer un tuto</button>
+    </div>
+    <div id="contenu-home">
+        <ul class="bordertuto">
+            {{#each touslestutos}}
+            <div class="tutoElement">
+                <li><img src="{{image}}" width="250" height="250"></li>
+                <li><b>{{name}}</b></li>
+                <li><i>{{description}}</i></li>
+                <li><span class="red">{{theme}}</span></li>
+                <li><button class="delete buttondelete">Supprimer le tuto</button></li>
+			</div>
+            {{/each}}
+        </ul>
+    </div>
+    {{/if}}
+</template>
